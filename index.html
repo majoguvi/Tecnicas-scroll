@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Scroll Experiences</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+
+        body {
+            font-family: Arial, sans-serif;
+
+            background: #fff5f8;
+
+            color: #2d2025;
+        }
+
+
+        /* -------------------------
+           HERO
+        ------------------------- */
+
+        .hero {
+
+            min-height: 100vh;
+
+            display: flex;
+
+            flex-direction: column;
+
+            justify-content: center;
+
+            align-items: center;
+
+            text-align: center;
+
+            padding: 40px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #fff5f8,
+                    #ffe4ed
+                );
+        }
+
+
+        .tag {
+
+            font-size: 13px;
+
+            font-weight: bold;
+
+            letter-spacing: 3px;
+
+            color: #c25b7a;
+
+            margin-bottom: 20px;
+        }
+
+
+        .hero h1 {
+
+            font-size: clamp(
+                45px,
+                8vw,
+                90px
+            );
+
+            margin-bottom: 25px;
+        }
+
+
+        .hero p:not(.tag) {
+
+            max-width: 650px;
+
+            font-size: 18px;
+
+            line-height: 1.6;
+
+            color: #695961;
+        }
+
+
+        .scroll-text {
+
+            margin-top: 60px;
+
+            font-size: 14px;
+
+            font-weight: bold;
+
+            color: #c25b7a;
+        }
+
+
+        /* -------------------------
+           TÉCNICAS
+        ------------------------- */
+
+        .techniques {
+
+            min-height: 100vh;
+
+            padding: 100px 30px;
+
+            background: #fff5f8;
+        }
+
+
+        .section-title {
+
+            text-align: center;
+
+            margin-bottom: 60px;
+        }
+
+
+        .section-title h2 {
+
+            font-size: clamp(
+                35px,
+                5vw,
+                60px
+            );
+
+            margin-bottom: 20px;
+        }
+
+
+        .section-title p {
+
+            max-width: 600px;
+
+            margin: auto;
+
+            color: #695961;
+
+            line-height: 1.6;
+        }
+
+
+        /* -------------------------
+           TARJETAS
+        ------------------------- */
+
+        .cards {
+
+            max-width: 1100px;
+
+            margin: auto;
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 25px;
+        }
+
+
+        .card {
+
+            display: flex;
+
+            flex-direction: column;
+
+            padding: 35px;
+
+            background: white;
+
+            border-radius: 25px;
+
+            box-shadow:
+                0 15px 40px
+                rgba(100, 50, 70, 0.10);
+
+            transition:
+                transform 0.3s,
+                box-shadow 0.3s;
+        }
+
+
+        .card:hover {
+
+            transform: translateY(-8px);
+
+            box-shadow:
+                0 25px 50px
+                rgba(100, 50, 70, 0.16);
+        }
+
+
+        .number {
+
+            width: 45px;
+
+            height: 45px;
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            margin-bottom: 25px;
+
+            border-radius: 50%;
+
+            background: #f9dce6;
+
+            color: #c25b7a;
+
+            font-weight: bold;
+        }
+
+
+        .card h3 {
+
+            font-size: 25px;
+
+            margin-bottom: 15px;
+        }
+
+
+        .card p {
+
+            color: #695961;
+
+            line-height: 1.6;
+
+            margin-bottom: 30px;
+        }
+
+
+        .card ul {
+
+            padding-left: 20px;
+
+            margin-bottom: 30px;
+
+            color: #695961;
+
+            line-height: 1.8;
+        }
+
+
+        /* -------------------------
+           BOTONES
+        ------------------------- */
+
+        .button {
+
+            margin-top: auto;
+
+            display: inline-block;
+
+            padding: 14px 20px;
+
+            border-radius: 30px;
+
+            background: #c25b7a;
+
+            color: white;
+
+            text-align: center;
+
+            text-decoration: none;
+
+            font-weight: bold;
+
+            transition: 0.3s;
+        }
+
+
+        .button:hover {
+
+            background: #a94766;
+
+            transform: translateY(-2px);
+        }
+
+
+        /* -------------------------
+           PIE
+        ------------------------- */
+
+        footer {
+
+            padding: 40px;
+
+            text-align: center;
+
+            background: #2d2025;
+
+            color: white;
+        }
+
+
+        footer p {
+
+            opacity: 0.75;
+
+            font-size: 14px;
+        }
+
+
+        /* -------------------------
+           RESPONSIVE
+        ------------------------- */
+
+        @media (max-width: 850px) {
+
+            .cards {
+
+                grid-template-columns: 1fr;
+                
+                max-width: 550px;
+            }
+
+        }
+
+
+        @media (max-width: 600px) {
+
+            .hero {
+
+                padding: 25px;
+            }
+
+
+            .hero h1 {
+
+                font-size: 45px;
+            }
+
+
+            .hero p:not(.tag) {
+
+                font-size: 16px;
+            }
+
+
+            .techniques {
+
+                padding: 70px 20px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- -------------------------
+         PRESENTACIÓN
+    ------------------------- -->
+
+    <header class="hero">
+
+        <p class="tag">
+            ANÁLISIS DE EXPERIENCIAS INMERSIVAS
+        </p>
+
+
+        <h1>
+            Scroll Experiences
+        </h1>
+
+
+        <p>
+            Comparación práctica de tres técnicas para
+            crear experiencias web interactivas controladas
+            mediante el desplazamiento del usuario.
+        </p>
+
+
+        <span class="scroll-text">
+            ↓ Explora las tres técnicas
+        </span>
+
+    </header>
+
+
+
+    <!-- -------------------------
+         TÉCNICAS
+    ------------------------- -->
+
+    <main>
+
+        <section class="techniques">
+
+
+            <div class="section-title">
+
+                <p class="tag">
+                    TRES METODOLOGÍAS
+                </p>
+
+
+                <h2>
+                    Elige una experiencia
+                </h2>
+
+
+                <p>
+                    Cada ejemplo implementa una técnica
+                    diferente para relacionar el scroll
+                    con el contenido visual.
+                </p>
+
+            </div>
+
+
+
+            <div class="cards">
+
+
+                <!-- VIDEO -->
+
+                <article class="card">
+
+                    <div class="number">
+                        01
+                    </div>
+
+
+                    <h3>
+                        Video HTML5
+                    </h3>
+
+
+                    <p>
+                        El scroll controla la posición
+                        del video utilizando la propiedad
+                        <strong>currentTime</strong>.
+                    </p>
+
+
+                    <ul>
+
+                        <li>
+                            Video HTML5
+                        </li>
+
+                        <li>
+                            currentTime
+                        </li>
+
+                        <li>
+                            Scroll interactivo
+                        </li>
+
+                    </ul>
+
+
+                    <a
+                        href="video/index.html"
+                        class="button">
+
+                        Ver experiencia →
+
+                    </a>
+
+                </article>
+
+
+
+                <!-- CANVAS -->
+
+                <article class="card">
+
+                    <div class="number">
+                        02
+                    </div>
+
+
+                    <h3>
+                        Canvas 2D
+                    </h3>
+
+
+                    <p>
+                        Una secuencia de 100 imágenes
+                        se muestra mediante Canvas
+                        dependiendo del scroll.
+                    </p>
+
+
+                    <ul>
+
+                        <li>
+                            100 frames WebP
+                        </li>
+
+                        <li>
+                            Canvas 2D
+                        </li>
+
+                        <li>
+                            Control por frame
+                        </li>
+
+                    </ul>
+
+
+                    <a
+                        href="canvas/index.html"
+                        class="button">
+
+                        Ver experiencia →
+
+                    </a>
+
+                </article>
+
+
+
+                <!-- PARALLAX -->
+
+                <article class="card">
+
+                    <div class="number">
+                        03
+                    </div>
+
+
+                    <h3>
+                        DOM + CSS
+                    </h3>
+
+
+                    <p>
+                        Diferentes elementos se mueven
+                        a distintas velocidades para
+                        crear una sensación de profundidad.
+                    </p>
+
+
+                    <ul>
+
+                        <li>
+                            Transform
+                        </li>
+
+                        <li>
+                            Position
+                        </li>
+
+                        <li>
+                            Efecto Parallax
+                        </li>
+
+                    </ul>
+
+
+                    <a
+                        href="parallax/index.html"
+                        class="button">
+
+                        Ver experiencia →
+
+                    </a>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- -------------------------
+         FOOTER
+    ------------------------- -->
+
+    <footer>
+
+        <p>
+            Experiencias de Scroll · Técnicas HTML5,
+            Canvas 2D y DOM/CSS
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>

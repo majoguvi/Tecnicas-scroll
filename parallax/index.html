@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Parallax - Scroll Experience</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- INTRODUCCIÓN -->
+
+    <header class="hero">
+
+        <p class="tag">EXPERIENCIA 03</p>
+
+        <h1>DOM + CSS</h1>
+
+        <p>
+            En este ejemplo, diferentes elementos de la página
+            se mueven a distintas velocidades para crear
+            una sensación de profundidad.
+        </p>
+
+        <span class="scroll-text">
+            ↓ Desplázate para explorar
+        </span>
+
+    </header>
+
+
+
+    <!-- EXPERIENCIA PARALLAX -->
+
+    <main>
+
+        <section class="parallax-section">
+
+            <div class="parallax-container">
+
+                <div class="background-circle"></div>
+
+                <div class="circle circle-one"></div>
+
+                <div class="circle circle-two"></div>
+
+                <div class="circle circle-three"></div>
+
+
+                <div class="content-card">
+
+                    <span class="small-title">
+                        DOM + CSS
+                    </span>
+
+                    <h2>
+                        Sensación de profundidad
+                    </h2>
+
+                    <p>
+                        Los elementos cambian su posición
+                        mientras el usuario hace scroll,
+                        creando un efecto de movimiento
+                        sin utilizar un video.
+                    </p>
+
+                </div>
+
+
+                <div class="floating-card card-one">
+                    <span>01</span>
+                    <strong>HTML</strong>
+                </div>
+
+
+                <div class="floating-card card-two">
+                    <span>02</span>
+                    <strong>CSS</strong>
+                </div>
+
+
+                <div class="floating-card card-three">
+                    <span>03</span>
+                    <strong>JavaScript</strong>
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- INFORMACIÓN -->
+
+        <section class="information-section">
+
+            <p class="tag">
+                ¿CÓMO FUNCIONA?
+            </p>
+
+            <h2>
+                Movimiento controlado por el scroll
+            </h2>
+
+            <p>
+                JavaScript detecta la posición del usuario
+                y modifica la posición de diferentes
+                elementos mediante transformaciones CSS.
+            </p>
+
+            <div class="tech-grid">
+
+                <div class="tech-card">
+
+                    <span>01</span>
+
+                    <h3>Transform</h3>
+
+                    <p>
+                        Permite mover elementos sin modificar
+                        constantemente su posición en el documento.
+                    </p>
+
+                </div>
+
+
+                <div class="tech-card">
+
+                    <span>02</span>
+
+                    <h3>Position</h3>
+
+                    <p>
+                        Permite colocar elementos en diferentes
+                        posiciones dentro de la experiencia.
+                    </p>
+
+                </div>
+
+
+                <div class="tech-card">
+
+                    <span>03</span>
+
+                    <h3>Scroll</h3>
+
+                    <p>
+                        La posición del usuario determina
+                        cuánto se mueve cada elemento.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <a
+                href="../index.html"
+                class="back-button">
+
+                ← Volver al inicio
+
+            </a>
+
+        </section>
+
+    </main>
+
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Canvas 2D - Scroll Experience</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="hero">
+        <p class="tag">EXPERIENCIA 02</p>
+
+        <h1>Secuencia de imágenes</h1>
+
+        <p>
+            En este ejemplo, el scroll controla una secuencia
+            de 100 imágenes mostradas mediante Canvas 2D.
+        </p>
+
+        <span class="scroll-text">
+            ↓ Desplázate para comenzar
+        </span>
+    </header>
+
+
+    <main>
+
+        <section class="canvas-section">
+
+            <div class="canvas-container">
+
+                <canvas id="canvas"></canvas>
+
+                <div class="info">
+                    <span>CANVAS 2D</span>
+                    <strong id="frame-counter">Frame 000 / 099</strong>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section class="end-section">
+
+            <p class="tag">FIN DE LA EXPERIENCIA</p>
+
+            <h2>100 frames controlados por el scroll</h2>
+
+            <p>
+                Cada posición del scroll corresponde a un frame
+                diferente de la secuencia de imágenes.
+            </p>
+
+            <a href="../index.html" class="back-button">
+                ← Volver al inicio
+            </a>
+
+        </section>
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>

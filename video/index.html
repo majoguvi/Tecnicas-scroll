@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Video HTML5 - Scroll Experience</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- INTRODUCCIÓN -->
+
+    <header class="hero">
+
+        <p class="tag">EXPERIENCIA 01</p>
+
+        <h1>Video + Scroll</h1>
+
+        <p>
+            En este ejemplo, el scroll controla directamente
+            el momento del video utilizando HTML5 y JavaScript.
+        </p>
+
+        <span class="scroll-text">
+            ↓ Desplázate para comenzar
+        </span>
+
+    </header>
+
+
+
+    <!-- SECCIÓN DEL VIDEO -->
+
+    <main>
+
+        <section class="video-section">
+
+            <div class="video-container">
+
+                <video
+                    id="video"
+                    src="assets/animacion.mp4"
+                    muted
+                    playsinline
+                    preload="auto">
+                </video>
+
+
+                <div class="info">
+
+                    <span>HTML5 VIDEO</span>
+
+                    <strong id="time-counter">
+                        00:00
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- FINAL -->
+
+        <section class="end-section">
+
+            <p class="tag">
+                FIN DE LA EXPERIENCIA
+            </p>
+
+            <h2>
+                El scroll controla el video
+            </h2>
+
+            <p>
+                La posición del usuario en la página se relaciona
+                con la duración del video mediante la propiedad
+                <strong>currentTime</strong>.
+            </p>
+
+            <a
+                href="../index.html"
+                class="back-button">
+                ← Volver al inicio
+            </a>
+
+        </section>
+
+    </main>
+
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

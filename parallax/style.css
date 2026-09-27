@@ -1,0 +1,548 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+
+    background: #fff5f8;
+
+    color: #2d2025;
+
+    overflow-x: hidden;
+}
+
+
+/* -------------------------
+   HERO
+------------------------- */
+
+.hero {
+
+    min-height: 100vh;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    padding: 40px;
+
+    background: linear-gradient(
+        135deg,
+        #fff5f8,
+        #ffe4ed
+    );
+}
+
+
+.tag {
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    letter-spacing: 3px;
+
+    color: #c25b7a;
+
+    margin-bottom: 20px;
+}
+
+
+.hero h1 {
+
+    font-size: clamp(
+        45px,
+        8vw,
+        90px
+    );
+
+    margin-bottom: 25px;
+}
+
+
+.hero p:not(.tag) {
+
+    max-width: 600px;
+
+    font-size: 18px;
+
+    line-height: 1.6;
+
+    color: #695961;
+}
+
+
+.scroll-text {
+
+    margin-top: 60px;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    color: #c25b7a;
+}
+
+
+/* -------------------------
+   SECCIÓN PARALLAX
+------------------------- */
+
+.parallax-section {
+
+    height: 250vh;
+
+    position: relative;
+}
+
+
+.parallax-container {
+
+    position: sticky;
+
+    top: 0;
+
+    height: 100vh;
+
+    overflow: hidden;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            #f8d8e4,
+            #fff0f5
+        );
+}
+
+
+/* -------------------------
+   CÍRCULO DEL FONDO
+------------------------- */
+
+.background-circle {
+
+    position: absolute;
+
+    width: 700px;
+
+    height: 700px;
+
+    border-radius: 50%;
+
+    background: #f1c1d2;
+
+    opacity: 0.5;
+
+    transform: translateZ(0);
+
+    will-change: transform;
+}
+
+
+/* -------------------------
+   CÍRCULOS
+------------------------- */
+
+.circle {
+
+    position: absolute;
+
+    border-radius: 50%;
+
+    will-change: transform;
+}
+
+
+.circle-one {
+
+    width: 180px;
+
+    height: 180px;
+
+    background: #d98ba7;
+
+    top: 10%;
+
+    left: 10%;
+}
+
+
+.circle-two {
+
+    width: 120px;
+
+    height: 120px;
+
+    background: #eab4c7;
+
+    bottom: 15%;
+
+    right: 12%;
+}
+
+
+.circle-three {
+
+    width: 70px;
+
+    height: 70px;
+
+    background: #c25b7a;
+
+    top: 25%;
+
+    right: 20%;
+}
+
+
+/* -------------------------
+   TARJETA PRINCIPAL
+------------------------- */
+
+.content-card {
+
+    position: relative;
+
+    z-index: 5;
+
+    width: min(600px, 85vw);
+
+    padding: 55px;
+
+    text-align: center;
+
+    background:
+        rgba(255, 255, 255, 0.88);
+
+    border-radius: 30px;
+
+    box-shadow:
+        0 30px 80px
+        rgba(100, 50, 70, 0.15);
+
+    backdrop-filter: blur(10px);
+
+    will-change: transform;
+}
+
+
+.small-title {
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    letter-spacing: 3px;
+
+    color: #c25b7a;
+}
+
+
+.content-card h2 {
+
+    font-size: clamp(
+        32px,
+        5vw,
+        55px
+    );
+
+    margin: 20px 0;
+}
+
+
+.content-card p {
+
+    color: #695961;
+
+    line-height: 1.7;
+
+    font-size: 17px;
+}
+
+
+/* -------------------------
+   TARJETAS FLOTANTES
+------------------------- */
+
+.floating-card {
+
+    position: absolute;
+
+    z-index: 4;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+
+    padding: 20px 25px;
+
+    background: white;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 15px 40px
+        rgba(100, 50, 70, 0.15);
+
+    will-change: transform;
+}
+
+
+.floating-card span {
+
+    font-size: 11px;
+
+    color: #c25b7a;
+
+    font-weight: bold;
+}
+
+
+.floating-card strong {
+
+    font-size: 18px;
+}
+
+
+.card-one {
+
+    top: 15%;
+
+    left: 8%;
+}
+
+
+.card-two {
+
+    bottom: 15%;
+
+    left: 15%;
+}
+
+
+.card-three {
+
+    top: 18%;
+
+    right: 8%;
+}
+
+
+/* -------------------------
+   INFORMACIÓN
+------------------------- */
+
+.information-section {
+
+    min-height: 100vh;
+
+    padding: 100px 30px;
+
+    text-align: center;
+
+    background: #fff5f8;
+}
+
+
+.information-section h2 {
+
+    font-size: clamp(
+        32px,
+        5vw,
+        60px
+    );
+
+    max-width: 750px;
+
+    margin: 0 auto 25px;
+}
+
+
+.information-section > p:not(.tag) {
+
+    max-width: 600px;
+
+    margin: 0 auto 60px;
+
+    color: #695961;
+
+    line-height: 1.7;
+}
+
+
+/* -------------------------
+   TARJETAS TÉCNICAS
+------------------------- */
+
+.tech-grid {
+
+    max-width: 1000px;
+
+    margin: 0 auto 70px;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+
+.tech-card {
+
+    padding: 30px;
+
+    text-align: left;
+
+    background: white;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 10px 30px
+        rgba(100, 50, 70, 0.08);
+}
+
+
+.tech-card span {
+
+    color: #c25b7a;
+
+    font-weight: bold;
+
+    font-size: 13px;
+}
+
+
+.tech-card h3 {
+
+    margin: 15px 0;
+
+    font-size: 22px;
+}
+
+
+.tech-card p {
+
+    color: #695961;
+
+    line-height: 1.6;
+}
+
+
+/* -------------------------
+   BOTÓN
+------------------------- */
+
+.back-button {
+
+    display: inline-block;
+
+    padding: 14px 25px;
+
+    border-radius: 30px;
+
+    background: #c25b7a;
+
+    color: white;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+
+.back-button:hover {
+
+    transform: translateY(-3px);
+
+    background: #a94766;
+}
+
+
+/* -------------------------
+   RESPONSIVE
+------------------------- */
+
+@media (max-width: 700px) {
+
+    .hero {
+
+        padding: 25px;
+    }
+
+
+    .hero h1 {
+
+        font-size: 45px;
+    }
+
+
+    .content-card {
+
+        padding: 35px 25px;
+    }
+
+
+    .floating-card {
+
+        padding: 12px 16px;
+    }
+
+
+    .card-one {
+
+        left: 3%;
+
+        top: 12%;
+    }
+
+
+    .card-two {
+
+        left: 5%;
+
+        bottom: 12%;
+    }
+
+
+    .card-three {
+
+        right: 3%;
+
+        top: 15%;
+    }
+
+
+    .tech-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+}
